@@ -1,0 +1,202 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 90vw;
+  padding: 1.25em;
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.main-img-wrapper {
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  width: 100%
+}
+
+.main-img-wrapper:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.main-img-wrapper:hover:before {
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.45;
+}
+
+.main-img-wrapper:hover:after {
+  content: "";
+  background: no-repeat url(./images/icon-view.svg) 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+}
+
+.main-img {
+  max-width:100%;
+  border-radius: 0.5em;
+  vertical-align: middle;
+}
+
+.title {
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  font-size: 110%;
+}
+
+.title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.paragraph {
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  font-size: 90%;
+}
+
+.info-wrapper {
+  display: flex;
+}
+
+.info-text {
+  font-size: 80%
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+.price {
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+  flex-grow: 1;
+}
+
+.time {
+  color: hsl(215, 51%, 70%);
+  font-weight: 400;
+}
+
+hr {
+  height: 1px;
+  background-color: hsl(215, 32%, 27%);
+  border: none;
+}
+
+.created-by-wrapper {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  font-size: 90%;
+}
+
+.created-by-img {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  height: 100%;
+}
+
+.created-by {
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  padding-left: 0.75em;
+}
+
+.created-by-name {
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+}
+
+.created-by-name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution { 
+  font-size: 0.65em; 
+  text-align: center; 
+  margin-top: 0.75em;
+  color: hsl(0, 0%, 75%);
+  font-weight: 300;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 411px) {
+  .card {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 500px) {
+  .card {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 576px) {
+  .card {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .card {
+    width: 30vw;
+    row-gap: 1.25em;
+  }
+
+  .created-by-wrapper {
+    height: 2.3em;
+    margin-bottom: 0.5em;
+  }
+
+  .attribution {
+    margin-top: 1.5em; 
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 22vw;
+  }
+}
